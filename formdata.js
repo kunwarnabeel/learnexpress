@@ -9,10 +9,8 @@ app.set('views','./views');
 
 //To parse URL encoded data
 app.use(bodyParser.urlencoded({ extended: false }))
-
 //To parse json data
 app.use(bodyParser.json())
-
 // for parsing multipart/form-data
 app.use(upload.array()); 
 app.use(express.static('public'));
@@ -25,4 +23,4 @@ app.post('/', (req, res) => {
     res.send(req.body);
 });
 
-app.listen(1004);
+app.listen(1004); 
